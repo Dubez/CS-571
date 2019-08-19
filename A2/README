@@ -1,0 +1,33 @@
+
+This is where you maybe (quickly) outline the project, the files you've
+submitted (what they do), how to compile and run (which should, largely, be
+taken care of by your makefile).  But, there might be notes, like, "remember
+that ARCHIVE needs to be defined in the environment".
+
+This is also where you'd tell me anything you want to say before your
+assignment is graded, so we know what to look for, that we might give you
+points for, and you're not wasting our time.
+
+############################################################################
+With all the files (README, expected.out, foo.c, foo.h, foo.java, foo.py, main.c)
+in the A2 folder a lot of make commands are necessary to be able to fully answer
+the questions in the assignment.
+
+i. The target recreation steps were shuffled a bit in order to get 'make' to act 
+recursively.
+
+ii. The '>' operator was used to send the foo.java output into the test.out file for
+comparison with the expected.out file.
+
+iii. To save the TA's the stres of having to hit the 'make' command multiple times,
+I incorporated a bash script (a2.sh) in the same folder as the files needed for the
+assignment. Each line of this bash script has a brief comment explaining what the 
+corresponding command achieves.
+This bash file has all permissions activated for all users. From the terminal, run thus:
+
+		$bash a2.sh
+
+iv. The comparison shows that the test.out and expected.out files contain the same thing.
+
+v. The bash script goes ahead to clean all temporary/unncessary files before exiting.
+
