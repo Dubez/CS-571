@@ -1,0 +1,62 @@
+Regular Expressions 
+For this assignment you will supply egrep instructions with regular
+expressions that return the requested matches.  You may test your
+answers out on the input file bright_side_of_life .
+
+For example, if I want to print all lines that contain the string
+Spiros in the file bright_side_of_life, it would look like this:
+
+    $ egrep 'Spiros' bright_side_of_life 
+
+For each of the following questions, provide an egrep command that
+returns the requested matches.
+
+1) match all lines that contain the string the
+
+$ egrep 'the' bright_side_of_life
+
+2) match all lines that contain the word the (not as a substring of a
+larger word)
+
+Hint: grep uses \< and \> as word anchors (beginning and end,
+respectively).
+
+$ egrep '\<the\>' bright_side_of_life
+
+3) match all lines that contain the word Just
+
+$ egrep '\<Just\>' bright_side_of_life
+
+4) match all lines that contain Just or just
+
+$ egrep '\<[J|j]ust\>' bright_side_of_life
+
+5) match all lines that start w/the word Just or just
+
+$ egrep '^[J|j]ust' bright_side_of_life
+
+6) match all lines that contain the word bad or mad
+
+$ egrep '\<[b|m]ad\>' bright_side_of_life
+
+7) match all lines that contain the word death or breath
+
+$ egrep '\<[b|d]r?eath\>' bright_side_of_life
+
+8) match all lines that end with you.  Trailing punctuation is
+acceptable (so, possibly followed by a period or a comma)
+
+$ egrep 'you[\,|\.]$' bright_side_of_life
+
+9) match lines that have leading whitespace
+
+$ egrep '^[ ]+' bright_side_of_life
+
+10) match lines that are empty
+
+$ egrep '^$' bright_side_of_life
+
+11) How many empty lines are there?
+
+$ egrep '^$' bright_side_of_life | wc -l
+
