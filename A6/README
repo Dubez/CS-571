@@ -1,0 +1,24 @@
+This README file provides information relevant to working with the python scripts to answer the questions.
+
+1. q1.py is used to compute the average score for each student. It is used thus:
+	$ python q1.py students
+
+2. q2.py is used in a similar way to q1 above to compute the average score for each student. It is used thus:
+	$ python q2.py students.csv
+
+3. q3.py is used to sort the entries in the ids file in ascending order of ID. It is used thus:
+	$ python q3.py ids
+
+4. q4.py is a modification of q3.py. It counts the command-line arguments, lookinf for a file to read and sort, but, unlike q3.py, if no filename is supplied, it defaults reads entries from standard input. It can then be used in two ways:
+	$ python q4.py	<filename>
+		OR:
+	$ python q4.py
+In the second case, it will ask user for entries through standard input (keyboard). User uses Ctrl-D to complete manual entry.
+
+5. parsePhoneNrs2.py is used to parse through a file containing phone numbers. It displays phone number extensions for valid entries, the extensions could be between 1 and 4 digits (exclusing the 'x' indicator). It is used thus:
+	$ python parsePhoneNrs2.py <filename>
+
+6. The help option has been added to give a brief description of how the script works and how to use it. The help information can be viewed in two ways:
+	$ python parsePhoneNrs2.py -h
+		OR:
+	$ python parsePhoneNrs2.py --help
