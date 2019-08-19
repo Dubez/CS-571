@@ -1,0 +1,37 @@
+README file to explain how to use the awk scripts to answer the questions.
+The file containing the scores dataset is called 'scores' and is supplied with
+the other scripts.
+
+1. To answer the first question, run as below. It checks the score dataset per
+row to be sure all the rows have the same number of fields.
+	$awk -f q1.awk scores
+
+2. To answer the second question, run as below. It prints the name of any
+student with a 0.
+	$awk -f q2.awk scores 
+
+3. To answer the third question, run as below. It uses the bash script to
+first sort the rows by the final test score and then print out the student
+with the highest score.
+	$bash q3.sh < scores | awk -f q3.awk
+
+4. To answer the fourth question, run as below. It prints the average score of
+each student, as well as the average score of the whole class.
+	$awk -f q4.awk scores
+
+5. To answer the fifth question, run as below. Two awk scripts are used to
+achieve this - one to sort and another to find the middle score.
+	$awk -f q5a.awk scores | awk -f q5b.awk
+
+6. To answer the sixth question, run as below. It converts the average scores
+into letter grades.
+	$awk -f q6.awk scores
+
+7. To answer the seventh question, run as below. It takes the result of q6.awk
+as input and then counts the number of students with each grade.
+	$awk -f q6.awk scores | awk -f q7.awk
+
+8. To answer the eighth question, run as below. Like q7.awk, it takes the
+result of q6.awk as input and then counts the number of students with each
+grade, using the '*' as a histogram.
+	$awk -f q6.awk scores | awk -f q8.awk
