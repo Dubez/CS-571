@@ -1,1 +1,1 @@
-# Just a repo containing assignments for CS-571.
+# Just a repo for CS-571 assignments.
