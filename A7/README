@@ -1,0 +1,18 @@
+
+The Python Script accompanying this README file, i.e. diff_eng.py, was written to implement a simulation of Charles Babbage's Difference Engine.
+
+As input, all the script requires from its user is the number of rows the user wants computed, together with the first row values for y and all its higher order differentials.
+
+These are supplied as arguments at the command line when running the script.
+
+As an example, to make the script compute the first 20 rows for the equation: y = x³-145x²+5375x-29375, we first compute by hand, the first-row values for y and its differentials, which are: -29375, 5231, -284 and 6. These values are supplied as arguments when running the script with only commas separating them so that they are read as one argument, after the number of rows argument. Example:
+
+			$sudo python diff_eng.py 20 -29375,5231,-284,6
+
+For the equation: y = x⁴, the first-row values are computed as: 0, 1, 14, 36 and 24. They are then supplied at the terminal as:
+	
+			$sudo python diff_eng.py 20 0,1,14,36,24
+
+The script also prints a plot of values of x (on the x-axis) against corresponding values of y (on the y-axis).
+
+If the number 20 is supplied, the script reproduces the first-row values supplied by the user and then computes the next 20 rows.
